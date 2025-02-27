@@ -16,11 +16,10 @@ int main() {
         return 1;
     }
 
-    char appName[100];  // Buffer to store each app name
+    char appName[100];  
     printf("Killing applications from %s...\n", FILE_NAME);
 
     while (fgets(appName, sizeof(appName), file)) {
-        // Remove newline character if present
         char *pos;
         if ((pos = strchr(appName, '\n')) != NULL) {
             *pos = '\0';
